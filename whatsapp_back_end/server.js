@@ -37,9 +37,8 @@ app.post('/message/new', async(req, res, next) => {
 
 
 
+const MONGO_DB_URI = `mongodb://localhost:27017/whatsapp`
 
-
-let MONGO_DB_URI = `mongodb+srv://rkRiaz:01726@cluster0.dcbsa.mongodb.net/whatsapp_messages?retryWrites=true&w=majority`
 let PORT = process.env.PORT || 8080
 mongoose.connect(MONGO_DB_URI,
         {useNewUrlParser: true,
